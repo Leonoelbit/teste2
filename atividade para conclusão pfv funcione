@@ -1,0 +1,99 @@
+// index.js
+
+// Função do Exercício 1 - Gera um array de números aleatórios
+function gerarArrayAleatorio(tamanho, minimo, maximo) {
+    if (tamanho <= 0) return [];
+    const array = [];
+    for (let i = 0; i < tamanho; i++) {
+        array.push(Math.floor(Math.random() * (maximo - minimo + 1)) + minimo);
+    }
+    return array;
+}
+
+// Função do Exercício 2 - Encontra o elemento mais frequente
+function encontrarElementoMaisFrequente(array) {
+    const mapaDeFrequencias = new Map();
+    let maxFrequencia = 0;
+    let elementoMaisFrequente = null;
+
+    for (const item of array) {
+        const frequencia = (mapaDeFrequencias.get(item) || 0) + 1;
+        mapaDeFrequencias.set(item, frequencia);
+
+        if (frequencia > maxFrequencia) {
+            maxFrequencia = frequencia;
+            elementoMaisFrequente = item;
+        }
+    }
+
+    if (maxFrequencia > 1) {
+        return elementoMaisFrequente;
+    } else {
+        return "Não há elemento mais frequente";
+    }
+}
+
+// Função do Exercício 3: Remove os elementos repetidos
+function removerElementosRepetidos(array) {
+    const mapaDeFrequencias = new Map();
+    const arrayUnico = [];
+
+    for (const item of array) {
+        const frequencia = (mapaDeFrequencias.get(item) || 0) + 1;
+        mapaDeFrequencias.set(item, frequencia);
+    }
+
+    for (const [item, frequencia] of mapaDeFrequencias.entries()) {
+        if (frequencia === 1) {
+            arrayUnico.push(item);
+        }
+    }
+
+    if (arrayUnico.length === array.length) {
+        return "Não há elementos repetidos";
+    } else {
+        return arrayUnico;
+    }
+}
+
+// Função do Exercício 4:; Concatena dois arrays
+function concatenarArrays(array1, array2) {
+    return array1.concat(array2);
+}
+
+// Função principal que chama todas as outras funções
+function principal() {
+    // uso das funções...pfv funcione
+
+    console.log("-----------------------------------");
+    console.log("Passando pela função do Exercício 1");
+    const arrayAleatorio = gerarArrayAleatorio(1, 1, 10);
+    console.log(`Entrada: array [${arrayAleatorio.join(", ")}]`);
+    console.log(`Saída: array [${arrayAleatorio.join(", ")}]`);
+    console.log("-----------------------------------");
+
+    console.log("-----------------------------------");
+    console.log("Passando pela função do Exercício 2");
+    const elementoMaisFrequente = encontrarElementoMaisFrequente(arrayAleatorio);
+    console.log(`Entrada: array [${arrayAleatorio.join(", ")}]`);
+    console.log(`Saída: ${elementoMaisFrequente}`);
+    console.log("-----------------------------------");
+
+    console.log("-----------------------------------");
+    console.log("Passando pela função do Exercício 3");
+    const arraySemRepetidos = removerElementosRepetidos(arrayAleatorio);
+    console.log(`Entrada: array [${arrayAleatorio.join(", ")}]`);
+    console.log(`Saída: ${Array.isArray(arraySemRepetidos) ? `[${arraySemRepetidos.join(", ")}]` : arraySemRepetidos}`);
+    console.log("-----------------------------------");
+
+    console.log("-----------------------------------");
+    console.log("Passando pela função do Exercício 4");
+    const outroArray = gerarArrayAleatorio(5, 50, 150);
+    console.log(`Entrada: array1 [${arrayAleatorio.join(", ")}], array2 [${outroArray.join(", ")}]`);
+    const arrayConcatenado = concatenarArrays(arrayAleatorio, outroArray);
+    console.log(`Saída: array [${arrayConcatenado.join(", ")}]`);
+    console.log("-----------------------------------");
+}
+
+// Chamando a função principal
+principal();
