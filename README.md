@@ -1,5 +1,5 @@
 
-Atividades de Aprendizagem
+Atividades de Aprendizagem [Avaliativa]
 
 Exercício 1 - Array de Números aleatórios
 Crie um projeto em node, da qual crie uma função que gera um array de
