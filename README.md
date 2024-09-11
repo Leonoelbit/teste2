@@ -36,3 +36,26 @@ Parte Adicional:
 
 Adicionar entrada e saída para os exemplos de todos os exercícios.
 
+-----------------------------------
+Ex: Exercício 1
+Entrada: array [7]
+Saída: array [7]
+-----------------------------------
+
+-----------------------------------
+Ex: Exercício 2
+Entrada: array [7]
+Saída: Não há elemento mais frequente
+-----------------------------------
+
+-----------------------------------
+Ex: Exercício 3
+Entrada: array [7]
+Saída: Não há elementos repetidos
+-----------------------------------
+
+-----------------------------------
+Ex: Exercício 4
+Entrada: array1 [7], array2 [88, 110, 141, 56, 101]
+Saída: array [7, 88, 110, 141, 56, 101]
+-----------------------------------
