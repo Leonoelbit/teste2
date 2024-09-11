@@ -31,3 +31,8 @@ cada função, precisa imprimir o seguinte trecho:
 "Entrada: array [x,x,x]"
 "Saída: array [y,y,y]"
 "-----------------------------------"
+
+Parte Adicional:
+
+Adicionar entrada e saída para os exemplos de todos os exercícios.
+
